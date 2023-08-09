@@ -1,3 +1,5 @@
 #!/usr/bin/python3
-for i in range(25, -1, -1):
-    print(f"{chr(122-i)}{chr(89-i)}", end='')
+c = 0
+for i in range(ord('z'), ord('a') -1, -1):
+    print("{}".format(chr(i - c)), end='')
+    c = 32 if c == 0  else 0
