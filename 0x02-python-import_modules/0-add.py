@@ -6,4 +6,4 @@ def add(a, b):
 
 from add_0 import add
 result = add(a, b)
-print(f"{} + {} = {}".format(a, b, add(a, b)))
+print("{} + {} = {}".format(a, b, add(a, b)))
