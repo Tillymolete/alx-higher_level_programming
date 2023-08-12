@@ -11,5 +11,8 @@ if __name__ == "__main__":
 	
 	for i, arg in enumerate(argv, start=1):
 		print("{}: {}".format(i, arg))
+	
 	if num_args == 0:
 		print(".", end=" ")
+	else:
+		print("")
