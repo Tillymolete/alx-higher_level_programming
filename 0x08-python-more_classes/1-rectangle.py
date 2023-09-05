@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+""" class module that creates a empty class rectangle"""
 
 class Rectangle:
 
