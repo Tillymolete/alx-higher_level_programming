@@ -1,4 +1,5 @@
-s module creates an empty class Rectangle that defines a rectangle"""
+#!/usr/bin/python3
+"""This module creates an empty class Rectangle that defines a rectangle"""
 
 
 class Rectangle:
