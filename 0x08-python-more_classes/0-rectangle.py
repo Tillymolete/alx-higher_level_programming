@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-""" class modulde for an empty class rectangle"""
+"""Defines a Rectangle class."""
+
 
 class Rectangle:
-    """ Empty class called rectangle """
+    """Represent a rectangle."""
     pass
