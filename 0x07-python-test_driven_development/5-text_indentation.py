@@ -1,27 +1,27 @@
 #!/usr/bin/python3
-"""
-Module prints 2 new lines after ".?:" charcaters for a function
-"""
+""" This module defines a function called text_indentation"""
 
-def max_integer(list=[]):
-	"""Function that prints two new lines after ".?:" characters
-	Args:
-		text: input string
-	Returns:
-		No return
-	Raises:
-		TypeError: if text is not a string
-	"""
 
-	if type(text) is not str:
-	raises TypeError("text must be a string")
+def text_indentation(text):
+    """ A function that prints a text with 2 new lines
+        after each of these characters: ., ? and :
+    Args:
+        text: the text to be printed
+    Raises:
+        TypeError: if text is not a string
 
-	s = text[:]
-
-	for d in ".?:":
-		list_text = s.split(d)
-		s = ""
-		for i in list_text:
-			i = i.strip(" ")
-			s = i + d if s is "" else s + "\n\n" + i + d
-	print(s[:-3], end="")
+    """
+    if not isinstance(text, str):
+        raise TypeError("text must be a string")
+    char_set = ['.', '?', ':']
+    line_print = ""
+    print_list = []
+    for char in text:
+        line_print += char
+        if char in char_set:
+            line_print = line_print.strip()
+            line_print += "\n"
+            print_list.append(line_print)
+            line_print = ""
+    for line in print_list:
+        print(line)
