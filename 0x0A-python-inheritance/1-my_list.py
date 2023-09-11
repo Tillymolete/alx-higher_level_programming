@@ -1,9 +1,13 @@
 #!/usr/bin/python3
-"""Defines inheritance list class mylist"""
+""" A module that creates a class called MyList """
+
 
 class MyList(list):
-	"""Implement printing built-in list class"""
-	
-	def print_sorted(self):
-	"""print a list in ascending order"""
-	print(sorted(self))
+    """ Defines a class called Mylist """
+
+    def print_sorted(self):
+        """ A public instance method that prints a sorted list"""
+
+        copy_list = self.copy()
+        copy_list.sort()
+        print(copy_list)
