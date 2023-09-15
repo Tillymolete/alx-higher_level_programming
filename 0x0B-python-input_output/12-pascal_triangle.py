@@ -1,33 +1,26 @@
 #!/usr/bin/python3
-#12_student.py
-"""Defines a class Student."""
+"""
+eturns a list of lists of integers
+representing the Pascal’s triangle of n
+"""
 
 
-class Student:
-    """Represent a student."""
-
-    def __init__(self, first_name, last_name, age):
-        """Initialize a new Student.
-
-        Args:
-            first_name (str): The first name of the student.
-            last_name (str): The last name of the student.
-            age (int): The age of the student.
-        """
-        self.first_name = first_name
-        self.last_name = last_name
-        self.age = age
-
-    def to_json(self, attrs=None):
-        """Get a dictionary representation of the Student.
-
-        If attrs is a list of strings, represents only those attributes
-        included in the list.
-
-        Args:
-            attrs (list): (Optional) The attributes to represent.
-        """
-        if (type(attrs) == list and
-                all(type(ele) == str for ele in attrs)):
-            return {k: getattr(self, k) for k in attrs if hasattr(self, k)}
-        return self.__dict__
+def pascal_triangle(n):
+    """
+    eturns a list of lists of integers
+    representing the Pascal’s triangle of n
+    """
+    if n <= 0:
+        return []
+    res = []
+    l = []
+    for x in range(n):
+        row = []
+        for y in range(x + 1):
+            if x == 0 or y == 0 or x == y:
+                row.append(1)
+            else:
+                row.append(l[y] + l[y - 1])
+        l = row
+        res.append(row)
+    return res
